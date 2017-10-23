@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+{% for s in students %}
+    <div>name: {{ s.name }}; age: {{ s.age }}</div>\n
+{% endfor %}
+</body>
+</html>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $.ajax({
+            url: "/index/data/ajax/",
+
+            success: function(data, status){
+                console.log(data)
+            }
+    })
+</script>
